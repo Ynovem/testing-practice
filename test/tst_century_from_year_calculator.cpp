@@ -1,4 +1,4 @@
-#include "catch.hpp"
+#include <catch.hpp>
 
 int centuryFromYear(int year) {
 	return 0;

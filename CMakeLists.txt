@@ -3,13 +3,8 @@ project(starter)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMakeModules)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_STANDARD 11)
 
-include_directories(src)
+include_directories(${CMAKE_SOURCE_DIR})
 
 add_subdirectory(src)
-add_subdirectory(test)
-
-if(UNIX)
-    include(CodeCoverage)
-endif()

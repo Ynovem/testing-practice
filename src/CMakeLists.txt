@@ -1,12 +1,17 @@
-cmake_minimum_required(VERSION 3.7)
-
 include(Qt)
+
+add_subdirectory(sentence)
 
 set(SOURCES
 	main.cpp
+	converter.cpp
 )
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-add_executable(starter ${SOURCES})
-target_link_libraries(starter Qt5::Core)
+add_executable(example ${SOURCES})
+
+target_link_libraries(example
+	Qt5::Core
+	sentence
+)
